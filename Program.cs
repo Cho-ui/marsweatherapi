@@ -18,7 +18,6 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 // Add database Context
 builder.Services.AddDbContext<ApplicationDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-    //UseInMemoryDatabase("MarsWeatherApiDB"));
 
 // Add CORS policy
 var AllowGETFromAllOrigins = "AllowGETFromAllOrigins";
